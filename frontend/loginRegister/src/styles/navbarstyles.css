@@ -1,0 +1,72 @@
+/* Navbar.css */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1f1f1f;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 10px; /* Add border-radius for curved design */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar-nav {
+  list-style: none;
+  display: flex;
+  gap: 20px; /* Push navbar items to the left */
+}
+
+.nav-item {
+  margin-right: 10px;
+}
+
+.nav-link {
+  color: #b7e013;
+  text-decoration: none;
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #ffffff;
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+.auth-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.login-button,
+.register-button,
+.anonymous-button {
+  background-color: #008000;
+  color: #ffffff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.login-button:hover,
+.register-button:hover,
+.anonymous-button:hover {
+  background-color: #006400;
+}
