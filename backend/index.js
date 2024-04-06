@@ -37,7 +37,7 @@ app.use(cors({
 const port = 3000;
 
 // Connect to MongoDB
-connect('mongodb+srv://Chandan:Chandan123@cluster0.bn1c8mj.mongodb.net/') // i will create a env file later on 
+connect('mongodb+srv://Chandan:Chandan123@cluster0.bn1c8mj.mongodb.net/') 
     .then(() => {
         console.log(chalk.cyan(`MongoDB connected`));
     })
@@ -94,7 +94,9 @@ io.on('connection', (socket) => {
       socket.to(roomID).emit('fileDownload', fileData);
     });
   });
-//message 
+//message `````````````````````````````````````````````````````````````````ACCOUNT_SID="ACde2d38f5a8447e52798977031fa68107"
+//``````````````````````````````````````````````````````````````````````````AUTH_TOKEN="8e6a8cde95456c7e3d7c1f632b4eb538"
+
 
 const accountSid = process.env.ACCOUNT_SID;
 const authToken = process.env.AUTH_TOKEN;

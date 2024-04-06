@@ -1,0 +1,42 @@
+/* Main chat container */
+.react-chatbot-kit-chat-container {
+
+    background-color: #191a1c;
+  }
+  
+  /* Inner chat container */
+  .react-chatbot-kit-chat-inner-container {
+  
+    border: 2px solid #6b8e23;
+  }
+  
+  /* Chat header */
+  .react-chatbot-kit-chat-header {
+    /* Customize header styles to match Loki's aesthetics */
+    background-color: #191a1c;
+    color: #6b8e23;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  /* Input container */
+  .react-chatbot-kit-chat-input-container {
+    background-color: #6b8e23;
+    /* Customize input container styles */
+  }
+  
+  /* Message container */
+  .react-chatbot-kit-chat-message-container {
+    /* Customize message container styles */
+    background-color:  #6b8e23;
+  }
+  .react-chatbot-kit-chat-input {
+    background-color: #6b8e23;
+   
+    /* Customize input field styles */
+  }
+
+  .react-chatbot-kit-chat-bot-message-arrow {
+    /* Customize bot message arrow styles */
+    background-color: aqua;
+  }
