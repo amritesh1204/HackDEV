@@ -9,10 +9,20 @@ const MessageParser = ({ children, actions }) => {
         actions.sendMessage('This is a chatbot. How can I assist you?');
   } else if (message.toLowerCase().includes('team')) {
     actions.sendMessage("My creators are Chandan,Amritesh,Saakshi, Vrinda. It is a project for our Hack36 Entry")
-
   }
+    else if (message.toLowerCase().includes('help'))
+     {
+      actions.sendMessage("You can refer to our readme in the github for further as--")
+    }
+
+
   else if (message.toLowerCase().includes('daddy')) {
     actions.sendMessage("Chandan 😜😂")
+}
+else if (message.toLowerCase().includes('features')){
+  actions.sendMessage("There is an anonymous button on right ")
+
+
 }
 }
   return (

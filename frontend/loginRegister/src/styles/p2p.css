@@ -1,0 +1,38 @@
+/* p2p.css */
+.p2pmessage-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.p2pmessage-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.peer-id-container {
+  margin-bottom: 20px;
+}
+
+.peer-id-container p {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.peer-id-container input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.chat-container {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+

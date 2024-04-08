@@ -8,6 +8,7 @@ import Homepage from './pages/homepage'
 import About from './pages/about';
 import Whistleblow from './pages/whistleblow';
 import Rooms from './pages/rooms';
+import P2pmessage from './pages/p2pmessage';
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
       <Route path='/about' element={<About/>}></Route>
       <Route path='/whistleblow' element={<Whistleblow/>}></Route>
       <Route path='/room/:roomID' element={<Rooms/>}></Route>
+      <Route path='/chat' element={<P2pmessage/>}></Route>
       
     </Routes>
     </BrowserRouter>
