@@ -1,70 +1,42 @@
 import React, { Component } from 'react';
-import '../styles/Chatbox.css'; // Import CSS file
+import '../styles/Chatbox.css'; // Make sure this path is correct
 
 class ChatBox extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      inputMsg: ''
-    };
-  }
-
-  generateChats = () => {
-    const { chatLog } = this.props;
-    if (!chatLog || chatLog.length === 0) {
-      return (
-        <div className="info">
-          <p>To test this component out, open this page in a new tab or send it to a friend.</p>
-        </div>
-      );
+    constructor(props) {
+        super(props);
+        this.state = {
+            inputMsg: ''
+        };
     }
 
-    return chatLog.map((item) => (
-      <div className="chat" key={`chat-${item.name}-${item.timestamp}`}>
-        <span className="name">{item.name}:</span> <span className="msg">{item.message}</span>
-      </div>
-    ));
-  }
-
-  handleSend = () => {
-    const { inputMsg } = this.state;
-    if (inputMsg.trim() !== '') {
-      this.props.onSend(inputMsg);
-      this.setState({ inputMsg: '' });
+    // Example handler function for message submission
+    handleSubmit = (e) => {
+        e.preventDefault();
+        // Add logic to send message
+        console.log(this.state.inputMsg);
+        this.setState({ inputMsg: '' }); // Reset input after sending
     }
-  }
 
-  handleKeyUp = (evt) => {
-    if (evt.keyCode === 13) {
-      this.handleSend();
+    render() {
+        return (
+            <div className="chatbox-container">
+                <div className="messages-section">
+                    {/* Messages display area */}
+                    {/* This is a placeholder. You should populate this based on your application's state */}
+                </div>
+                <form className="message-form" onSubmit={this.handleSubmit}>
+                    <input
+                        type="text"
+                        value={this.state.inputMsg}
+                        onChange={(e) => this.setState({ inputMsg: e.target.value })}
+                        className="message-input"
+                        placeholder="Type a message..."
+                    />
+                    <button type="submit" className="send-button">Send</button>
+                </form>
+            </div>
+        );
     }
-  }
-
-  handleInputChange = (evt) => this.setState({ inputMsg: evt.target.value });
-
-  render() {
-    return (
-      <div className="container">
-        <div className="chatHeader">
-          <h1 className="title">P2P Chat Example</h1>
-        </div>
-        <div className="chatBox">
-          {this.generateChats()}
-        </div>
-        <div className="bottomBar">
-          <input
-            className="chatInput"
-            type="text"
-            placeholder="Type a message..."
-            value={this.state.inputMsg}
-            onChange={this.handleInputChange}
-            onKeyUp={this.handleKeyUp}
-          />
-          <button className="sendButton" onClick={this.handleSend}>Send</button>
-        </div>
-      </div>
-    );
-  }
 }
 
 export default ChatBox;

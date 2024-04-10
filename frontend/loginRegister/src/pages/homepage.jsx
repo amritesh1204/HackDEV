@@ -20,11 +20,6 @@ export default function homepage() {
         actionProvider={ActionProvider}
       />
       </div>
-      <div class="typewriter">
-         <h1>For centuries, this secret society has silently watched over humanity, safeguarding it from the perilous machinations of power and corruption.
-
-Founded in the ancient annals of history by visionary thinkers and mystics, The Guardians emerged as a response to the insatiable greed and lust for dominion that threatened to engulf civilizations. United by their unwavering commitment to justice and balance, they vowed to operate from the shadows, unseen and unheard, yet ever vigilant..</h1>
-      </div>
 
     </Layout>
     </>
