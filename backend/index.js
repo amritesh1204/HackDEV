@@ -97,8 +97,8 @@ io.on('connection', (socket) => {
 
 
 
-const accountSid = process.env.ACCOUNT_SID;
-const authToken = process.env.AUTH_TOKEN;
+const accountSid ="ACde2d38f5a8447e52798977031fa68107";
+const authToken = "78294eb1a2d117b004894b80eb9ddbd4";
 const client = twilio(accountSid, authToken);
 
 app.post('/send-message', async (req, res) => {

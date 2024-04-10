@@ -1,0 +1,70 @@
+/* Chatbox.css */
+.container {
+
+  width: 100%;
+  max-width: 500px;
+  margin: 10px auto;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+}
+
+.chatHeader {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.title {
+  margin: 0;
+  font-size: 20px;
+  color: #333;
+}
+
+.chatBox {
+  max-height: 300px;
+  overflow-y: auto;
+  padding: 10px;
+}
+
+.chat {
+  margin-bottom: 10px;
+}
+
+.name {
+  margin-right: 10px;
+  font-weight: bold;
+  color: #007bff; /* Change color to blue */
+}
+
+.msg {
+  color: #333;
+}
+
+.bottomBar {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.chatInput {
+  flex: 1;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.sendButton {
+  padding: 8px 20px;
+  margin-left: 10px;
+  font-size: 16px;
+  background-color: #007bff; /* Change color to blue */
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.sendButton:hover {
+  background-color: #0056b3; /* Darker shade of blue */
+}

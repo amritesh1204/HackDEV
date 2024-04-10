@@ -1,25 +1,30 @@
-/* Navbar.css */
-
 .navbar {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* Keeps items spaced out */
   align-items: center;
-  background-color: #1f1f1f;
+  background: rgba(0, 0, 0, 0.2); /* Black with transparency */
   color: #ffffff;
-  padding: 10px 20px;
-  border-radius: 10px; /* Add border-radius for curved design */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 5px 10px; /* Reduced vertical padding to make navbar slimmer */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Bolder shadow for depth */
+  transition: background-color 0.3s ease; /* Smooth transition for background on hover */
+}
+
+.navbar:hover {
+  box-shadow: 0 8px 16px rgba(0,0,0,0.5); /* Enhanced shadow on hover for a "lifting" effect */
 }
 
 .navbar-brand {
-  font-size: 1.5rem;
-  font-weight: bold;
+  font-size: 2.5rem; /* Increased font size for brand */
+  font-weight: 1500;
+  color: cornsilk; /* Ensures brand visibility against the gradient */
 }
 
 .navbar-nav {
   list-style: none;
   display: flex;
-  gap: 20px; /* Push navbar items to the left */
+  gap: 20px;
+  margin-right: auto; /* Pushes the nav items to the left and auth buttons to the right */
 }
 
 .nav-item {
@@ -27,9 +32,10 @@
 }
 
 .nav-link {
-  color: #b7e013;
+  color: #e6e6e6; /* Adjusted for better visibility */
   text-decoration: none;
   position: relative;
+  font-size: 1.2rem; /* Increased font size for navigation links */
 }
 
 .nav-link::after {
@@ -38,7 +44,7 @@
   bottom: -5px;
   left: 0;
   width: 0;
-  height: 2px;
+  height: 3px;
   background-color: #ffffff;
   transition: width 0.3s ease-in-out;
 }
@@ -50,23 +56,26 @@
 
 .auth-buttons {
   display: flex;
-  gap: 10px;
+  gap: 10px; /* Adjust if more space is needed between buttons */
+  /* This ensures the buttons are aligned to the right */
 }
 
 .login-button,
 .register-button,
 .anonymous-button {
-  background-color: #008000;
+  background-color: #b66611; /* Color updated for consistency */
   color: #ffffff;
   border: none;
   padding: 8px 16px;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s, transform 0.2s;
+  margin-right: 20px; /* Right margin added to each button for spacing */
 }
 
 .login-button:hover,
 .register-button:hover,
 .anonymous-button:hover {
-  background-color: #006400;
+  background-color: #218838; /* A slightly darker shade for depth */
+  transform: translateY(-2px); /* Lift button slightly on hover */
 }
