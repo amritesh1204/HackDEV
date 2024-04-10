@@ -9,7 +9,7 @@
 .p2pmessage-title {
   font-size: 24px;
   font-weight: bold;
-  color: #333;
+  color: #000000;
   margin-bottom: 20px;
 }
 
@@ -19,7 +19,7 @@
 
 .peer-id-container p {
   font-size: 18px;
-  color: #666;
+  color: #b60202;
   margin-bottom: 10px;
 }
 

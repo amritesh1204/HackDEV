@@ -7,28 +7,28 @@
   /* Inner chat container */
   .react-chatbot-kit-chat-inner-container {
   
-    border: 2px solid #6b8e23;
+    border: 2px solid #8e2323;
   }
   
   /* Chat header */
   .react-chatbot-kit-chat-header {
     /* Customize header styles to match Loki's aesthetics */
     background-color: #191a1c;
-    color: #6b8e23;
+    color: #1046e7;
     font-size: 20px;
     font-weight: bold;
   }
   
   /* Input container */
   .react-chatbot-kit-chat-input-container {
-    background-color: #6b8e23;
+    background-color: #8d1325;
     /* Customize input container styles */
   }
   
   /* Message container */
   .react-chatbot-kit-chat-message-container {
     /* Customize message container styles */
-    background-color:  #6b8e23;
+    background-color:  #faf3e6;
   }
   .react-chatbot-kit-chat-input {
     background-color: #6b8e23;
