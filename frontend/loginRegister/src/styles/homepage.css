@@ -1,48 +1,70 @@
-/* General Page Styles */
 body {
-    background-color: #0B0D0C; /* Dark background fallback for when the image is loading */
-    color: blanchedalmond; /* Text color */
-    background-image: url("/Users/amriteshsingh/HackDEV/frontend/loginRegister/src/images/2150960926.jpg"); /* Path to your background image */
-    background-size: cover; /* Scale the image to be as large as possible */
-    background-position: center; /* Center the background image */
-    background-repeat: no-repeat; /* Do not repeat the image */
-    height: 100vh; /* Make sure the body covers the whole viewport */
-    margin: 0; /* Corrected margin to remove default margin */
-}
-
-/* Layout and Navbar */
-.layout {
+    background-color: #0B0D0C;
+    color: #FFEBCD;
+    background-image: url("C:\Users\chand\OneDrive\Desktop\Hack36\frontend\loginRegister\src\images\2150960926.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  .layout {
     display: flex;
     flex-direction: column;
-}
-
-.navbar {
-    display: flex; /* Make sure the navbar is a flex container */
-    justify-content: space-between; /* Layout the items */
-    /* Other styles */
-}
-
-/* Navbar link hover effect moved outside to directly target .nav-link */
-.nav-link:hover {
-    color: #ccc; /* Lightens the text color on hover */
-}
-
-/* Chatbot Container Styles */
-.chatbot {
-    position: fixed; /* Position fixed to the viewport */
-    right: 20px; /* Distance from the right of the viewport */
-    bottom: 20px; /* Distance from the bottom of the viewport */
-    max-width: 350px; /* Maximum width */
-}
-
-/* Chatbot frame styling */
-.chatbot .react-chatbot-kit-chat-container {
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow around the chatbot */
-    border-radius: 8px; /* Round the corners */
-}
-
-/* Adjust chatbot size */
-.chatbot .react-chatbot-kit-chat-container .react-chatbot-kit-chat-inner-container {
-    width: 100%; /* Adjust width to be 100% of its parent */
-    height: 500px; /* Adjust height */
-}
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .nav-link:hover {
+    color: #ccc;
+  }
+  
+  .chatbot {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    max-width: 350px;
+  }
+  
+  .chatbot .react-chatbot-kit-chat-container {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  
+  .chatbot .react-chatbot-kit-chat-container .react-chatbot-kit-chat-inner-container {
+    width: 100%;
+    height: 500px;
+  }
+  
+  .typewriter h1 {
+    color: #fff;
+    font-family: monospace;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange; /* The typewriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0; /* Set margin to 0 to align the text to the left */
+    padding-left: 10px; /* Add some padding to ensure the text starts from the left */
+    letter-spacing: .15em; /* Adjust as needed */
+  }
+  
+  .typewriter h1.animate {
+    animation: typing 7s steps(30, end), /* Increase the duration of typing animation */
+               blink-caret 7s step-end; /* Make the cursor animation duration same as typing */
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: rgb(223, 204, 169) }
+  }
+  

@@ -6,8 +6,7 @@ import Layout from './layout';
 const About = () => {
   return (
     <Layout>
-      <div>
-        <h1>About Page Content Add about us here after i am done with backend</h1>
+      <div className='typewriter'>This is an example of how we are going to add a page here
       </div>
     </Layout>
   );
