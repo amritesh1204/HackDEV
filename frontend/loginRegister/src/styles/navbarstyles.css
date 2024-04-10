@@ -17,7 +17,7 @@
 .navbar-brand {
   font-size: 2.5rem; /* Increased font size for brand */
   font-weight: 1500;
-  color: cornsilk; /* Ensures brand visibility against the gradient */
+  color: rgb(241, 196, 13); /* Ensures brand visibility against the gradient */
 }
 
 .navbar-nav {

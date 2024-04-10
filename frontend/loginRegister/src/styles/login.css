@@ -1,11 +1,18 @@
 /* login.css */
-
 .container {
-    max-width: 400px;
-    margin: 0 auto;
+    max-width: 500px;
+    margin: auto;
     padding: 20px;
-    border: 1px solid #ccc;
+    border: 1px solid #cccccc39;
     border-radius: 5px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 500px;
+    background-color: rgba(249, 249, 249, 0.5);
+    color: #965c05;
 }
 
 .mb-3 {
@@ -14,21 +21,23 @@
 
 .form-label {
     font-weight: bold;
+    color: #965c05;
 }
 
 .form-control {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #cccccc;
     border-radius: 5px;
     font-size: 16px;
+    color: #965c05;
 }
 
 .btn-primary {
     display: block;
     width: 100%;
     padding: 10px;
-    background-color: #007bff;
+    background-color: #965c05;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -37,7 +46,7 @@
 }
 
 .btn-primary:hover {
-    background-color: #0056b3;
+    background-color: #9c2d0b;
 }
 
 .alert {
