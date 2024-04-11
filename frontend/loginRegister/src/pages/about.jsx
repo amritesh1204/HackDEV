@@ -1,6 +1,11 @@
 import React, { useState } from 'react';
 import Layout from './layout';
-import '../styles/about.css'
+import '../styles/about.css';
+import person1 from '../images/20973100347.png'; //me
+import person2 from '../images/picofme.png';  //vrinda
+import person3 from '../images/picofme (4).png'; //amritesh
+import person4 from '../images/picofme (6).png'; //saakshi
+
 
 const About = () => {
   const [showPopup, setShowPopup] = useState(false);
@@ -16,13 +21,37 @@ const About = () => {
   return (
     <Layout>
       <div className='typewriter'>
-        This is an example of how we are going to add a page here
-        <button onClick={handleOpenPopup}>Buy Me Coffee</button>
+        <p>Meet our secret society of talented individuals. Together, we make magic happen.</p>
+        <div className="team-members">
+          {/* Person 1 */}
+          <div className="team-member">
+            <img src={person1} alt="Person 1" className="team-member-image" />
+            <p className="team-member-name">Chandan</p>
+          </div>
+          {/* Person 2 */}
+          <div className="team-member">
+            <img src={person2} alt="Person 2" className="team-member-image" />
+            <p className="team-member-name">Vrinda</p>
+          </div>
+          {/* Person 3 */}
+          <div className="team-member">
+            <img src={person3} alt="Person 3" className="team-member-image" />
+            <p className="team-member-name">Amritesh</p>
+          </div>
+          {/* Person 4 */}
+          <div className="team-member">
+            <img src={person4} alt="Person 4" className="team-member-image" />
+            <p className="team-member-name">Saakshi</p>
+          </div>
+        </div>
+        <button className='buy-coffee-btn' onClick={handleOpenPopup}>Buy Me Coffee</button>
       </div>
+      
       {showPopup && (
         <div className="popup">
           <div className="popup-inner">
             <button onClick={handleClosePopup}>Close</button>
+           
             <iframe src="https://rzp.io/l/HBD9xgr" title="Buy Me Coffee"></iframe>
           </div>
         </div>
@@ -31,4 +60,4 @@ const About = () => {
   );
 };
 
-export default About
+export default About;

@@ -1,17 +1,17 @@
 import React, { useState } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
-import '../styles/navbarstyles.css'; // Import your navbar stylesheet
+import '../styles/navbarstyles.css'; 
 
 export default function Navbar() {
   const navigate = useNavigate();
-  const [isAnonymous, setIsAnonymous] = useState(false); // State to manage anonymous feature toggle
+  const [isAnonymous, setIsAnonymous] = useState(false);
 
   const handleNavigate = (path) => {
     navigate(path);
   };
 
   const toggleAnonymous = () => {
-    setIsAnonymous(!isAnonymous); // Toggle the state of the anonymous feature
+    setIsAnonymous(!isAnonymous); 
   };
 
   return (
@@ -25,7 +25,7 @@ export default function Navbar() {
           <NavLink to="/chat" className="nav-link">Chat</NavLink>
         </li>
         <li className="nav-item">
-          <NavLink to="/videocall" className="nav-link">Video Call</NavLink>
+          <NavLink to="/qr" className="nav-link">Encrypt</NavLink>
         </li>
         {isAnonymous && (
           <li className="nav-item">

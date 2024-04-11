@@ -1,24 +1,23 @@
-/* Chatbox.css */
 .chatbox-container {
   width: 100%;
   max-width: 500px;
   margin: 20px auto;
   border-radius: 8px;
-  background: linear-gradient(to bottom, #ffad60, #cc8400); /* Light to darker orange-brownish gradient */
-  border: 1px solid #c99f82; /* Darker brown for the border */
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Soft shadow for depth */
+  background: linear-gradient(to bottom, #ffad60, #cc8400);
+  border: 1px solid #c99f82;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
 .messages-section {
   padding: 10px;
-  height: 300px; /* Adjust based on your preference */
-  overflow-y: auto; /* Enables scrolling for overflow */
+  height: 300px;
+  overflow-y: auto;
 }
 
 .message-form {
   display: flex;
   padding: 10px;
-  border-top: 1px solid #8b4513; /* Separator */
+  border-top: 1px solid #8b4513;
 }
 
 .message-input {
@@ -26,34 +25,40 @@
   border: 2px solid gold;
   border-radius: 4px;
   padding: 5px;
-  margin-right: 10px; /* Spacing between input and button */
+  margin-right: 10px;
 }
 
 .send-button {
-  background-color: #cc8400; /* Darker shade of orange */
+  background-color: #cc8400;
   color: white;
   border: none;
   border-radius: 4px;
   padding: 6px 12px;
   cursor: pointer;
-  transition: background-color 0.2s; /* Smooth transition for hover effect */
+  transition: background-color 0.2s;
 }
 
 .send-button:hover {
-  background-color: #ffad60; /* Lighter shade for hover effect */
+  background-color: #ffad60;
 }
 
-/* Add your alternating message bubble styles here */
 .message-bubble-own {
   background-color: #ffcc99;
   padding: 5px;
   border-radius: 4px;
-  margin-bottom: 5px; /* Spacing between messages */
+  margin-bottom: 5px;
 }
 
 .message-bubble-other {
   background-color: #ff9966;
   padding: 5px;
   border-radius: 4px;
-  margin-bottom: 5px; /* Spacing between messages */
+  margin-bottom: 5px;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .chatbox-container {
+    max-width: 100%;
+  }
 }

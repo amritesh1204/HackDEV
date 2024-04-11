@@ -1,7 +1,7 @@
 body {
     background-color: #0B0D0C;
-    color: #FFEBCD;
-    background-image: url("/Users/amriteshsingh/HackDEV/frontend/loginRegister/src/images/2150960926.jpg");
+    color: #fafdfc;
+    background-image: url("C:\Users\chand\OneDrive\Desktop\Hack36\frontend\loginRegister\src\images\2150960926.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -43,7 +43,7 @@ body {
   .typewriter h1 {
     color: #fff;
     font-family: monospace;
-    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    overflow: hidden; 
     border-right: .15em solid orange; /* The typewriter cursor */
     white-space: nowrap; /* Keeps the content on a single line */
     margin: 0; /* Set margin to 0 to align the text to the left */
