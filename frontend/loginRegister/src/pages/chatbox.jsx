@@ -1,6 +1,6 @@
 // ChatBox.jsx
 import React, { Component } from 'react';
-import '../styles/Chatbox.css'; // Make sure this path is correct
+import '../styles/Chatbox.css'; 
 
 class ChatBox extends Component {
   constructor(props) {

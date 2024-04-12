@@ -9,12 +9,15 @@ import '../styles/homepage.css'
 import ActionProvider from './Actionprovider' 
 import MessageParser from './Messageparser'
 import config from './config';
+import ReusableTrailComponent from './trailcomponent';
 
 export default function homepage() {
   return (
     <>
     <Layout>
-      
+      <div className="trail">
+        <ReusableTrailComponent></ReusableTrailComponent>
+      </div>
       <div className='chatbot'>
     <Chatbot 
         config={config}

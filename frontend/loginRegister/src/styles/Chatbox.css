@@ -3,8 +3,8 @@
   max-width: 500px;
   margin: 20px auto;
   border-radius: 8px;
-  background: linear-gradient(to bottom, #ffad60, #cc8400);
-  border: 1px solid #c99f82;
+  background: linear-gradient(to bottom, #18429c, #750271);
+  border: 1px solid #1a120c;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
@@ -17,12 +17,12 @@
 .message-form {
   display: flex;
   padding: 10px;
-  border-top: 1px solid #8b4513;
+  border-top: 1px solid #e8cdb9;
 }
 
 .message-input {
   flex-grow: 1;
-  border: 2px solid gold;
+  border: 2px solid rgb(237, 233, 238);
   border-radius: 4px;
   padding: 5px;
   margin-right: 10px;
@@ -50,7 +50,7 @@
 }
 
 .message-bubble-other {
-  background-color: #ff9966;
+  background-color: #aa55ef;
   padding: 5px;
   border-radius: 4px;
   margin-bottom: 5px;

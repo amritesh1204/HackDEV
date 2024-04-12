@@ -1,7 +1,7 @@
 body {
     background-color: #0B0D0C;
-    color: #fafdfc;
-    background-image: url("C:\Users\chand\OneDrive\Desktop\Hack36\frontend\loginRegister\src\images\2150960926.jpg");
+    color: #8a75e7;
+    background-image: url("C:\Users\chand\OneDrive\Desktop\Hack36\frontend\loginRegister\src\images\bg2.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -20,40 +20,62 @@ body {
   }
   
   .nav-link:hover {
-    color: #ccc;
+    color: #c926b0;
   }
   
-  .chatbot {
-    position: fixed;
-    right: 20px;
-    bottom: 20px;
-    max-width: 350px;
-  }
   
-  .chatbot .react-chatbot-kit-chat-container {
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-  }
+.chatbot {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  max-width: 350px;
+}.react-chatbot-kit-chat-container {
+  background: linear-gradient(135deg, #2d13c0, #6b0687);
+  border-radius: 10px;
+}
+
+.react-chatbot-kit-chat-inner-container {
+  border: 2px solid rgba(150, 62, 168, 0.5);
+}
+
+.react-chatbot-kit-chat-header {
+  background-color: rgba(66, 34, 205, 0.6);
+  color: #000000;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.react-chatbot-kit-chat-input-container {
+  background-color: rgba(165, 90, 192, 0.5);
+}
+
+.react-chatbot-kit-chat-message-container {
+  background-color: rgba(25, 22, 1, 0.7);
+}
+
+.react-chatbot-kit-chat-input {
+  background-color: rgba(183, 90, 160, 0.863);
+}
+
+.react-chatbot-kit-chat-bot-message-arrow {
+  background: linear-gradient(135deg, #8a2be2, #1e90ff);
+}
   
-  .chatbot .react-chatbot-kit-chat-container .react-chatbot-kit-chat-inner-container {
-    width: 100%;
-    height: 500px;
-  }
-  
+ 
   .typewriter h1 {
     color: #fff;
     font-family: monospace;
     overflow: hidden; 
-    border-right: .15em solid orange; /* The typewriter cursor */
-    white-space: nowrap; /* Keeps the content on a single line */
-    margin: 0; /* Set margin to 0 to align the text to the left */
-    padding-left: 10px; /* Add some padding to ensure the text starts from the left */
-    letter-spacing: .15em; /* Adjust as needed */
+    border-right: .15em solid rgb(219, 215, 208);
+    white-space: nowrap; 
+    margin: 0;
+    padding-left: 10px; 
+    letter-spacing: .15em;
   }
   
   .typewriter h1.animate {
-    animation: typing 7s steps(30, end), /* Increase the duration of typing animation */
-               blink-caret 7s step-end; /* Make the cursor animation duration same as typing */
+    animation: typing 7s steps(30, end), 
+               blink-caret 7s step-end;
   }
   
   /* The typing effect */
@@ -62,7 +84,7 @@ body {
     to { width: 100% }
   }
   
-  /* The typewriter cursor effect */
+ 
   @keyframes blink-caret {
     from, to { border-color: transparent }
     50% { border-color: rgb(223, 204, 169) }

@@ -1,42 +1,5 @@
 
-.react-chatbot-kit-chat-container {
-  background-color: rgba(38, 38, 38, 0.6); /* Dark gray background with increased transparency */
-  border-radius: 10px; /* Rounded corners */
-}
 
-/* Inner chat container */
-.react-chatbot-kit-chat-inner-container {
-  border: 2px solid rgba(166, 140, 109, 0.5); 
-}
-
-/* Chat header */
-.react-chatbot-kit-chat-header {
-  background-color: rgba(38, 38, 38, 0.6); /* Dark gray background with increased transparency */
-  color: #000000;
-  font-size: 20px;
-  font-weight: bold;
-}
-
-/* Input container */
-.react-chatbot-kit-chat-input-container {
-  background-color: rgba(237, 162, 71, 0.5); /* Brown background with transparency */
-}
-
-/* Message container */
-.react-chatbot-kit-chat-message-container {
-  background-color: rgba(25, 22, 1, 0.7);
-}
-
-.react-chatbot-kit-chat-input {
-  background-color: rgba(145, 123, 82, 0.7); /* Darker brown background with transparency */
-}
-
-.react-chatbot-kit-chat-bot-message-arrow {
-  background-color: rgba(166, 140, 109, 0.5); /* Brown bot message arrow with transparency */
-}
-
-
-/* Responsive styling */
 @media only screen and (max-width: 600px) {
   .react-chatbot-kit-chat-container {
     max-width: 100%;

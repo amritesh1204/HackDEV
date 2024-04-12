@@ -16,7 +16,7 @@ export default function Navbar() {
 
   return (
     <nav className="navbar">
-      <div className="navbar-brand">Loki</div>
+      <div className="navbar-brand">Hack36</div>
       <ul className="navbar-nav">
         <li className="nav-item">
           <NavLink to="/about" className="nav-link">About Us</NavLink>

@@ -4,12 +4,13 @@
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
+  color: aliceblue;
 }
 
 .p2pmessage-title {
   font-size: 24px;
   font-weight: bold;
-  color: #000000;
+  color: #009434;
   margin-bottom: 20px;
 }
 
@@ -18,8 +19,8 @@
 }
 
 .peer-id-container p {
-  font-size: 18px;
-  color: #b60202;
+  font-size: 24px;
+  color: #ffffff;
   margin-bottom: 10px;
 }
 
@@ -29,10 +30,12 @@
   font-size: 16px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  color: aliceblue;
 }
 
 .chat-container {
   border: 1px solid #ccc;
   border-radius: 5px;
+  color: aliceblue;
 }
 

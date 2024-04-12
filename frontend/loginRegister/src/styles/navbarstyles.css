@@ -3,7 +3,7 @@
   justify-content: space-between; /* Keeps items spaced out */
   align-items: center;
   background: rgba(0, 0, 0, 0.2); /* Black with transparency */
-  color: #ffffff;
+  color: #671edc;
   padding: 5px 10px; /* Reduced vertical padding to make navbar slimmer */
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Bolder shadow for depth */
@@ -32,7 +32,7 @@
 }
 
 .nav-link {
-  color: #e6e6e6; /* Adjusted for better visibility */
+  color: #e2ae7b; /* Adjusted for better visibility */
   text-decoration: none;
   position: relative;
   font-size: 1.2rem; /* Increased font size for navigation links */
