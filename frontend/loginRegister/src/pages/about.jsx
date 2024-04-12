@@ -21,7 +21,7 @@ const About = () => {
   return (
     <Layout>
       <div className='typewriter'>
-        <p>Meet our secret society of talented individuals. Together, we make magic happen.</p>
+        <p className='about-text'>Meet our secret society of talented individuals. Together, we make magic happen.</p>
         <div className="team-members">
           {/* Person 1 */}
           <div className="team-member">
