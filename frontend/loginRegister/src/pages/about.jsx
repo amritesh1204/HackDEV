@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Layout from './layout';
 import '../styles/about.css';
-import person1 from '../images/20973100347.png'; //me
+import person1 from '../images/chandler.png'; //me
 import person2 from '../images/picofme.png';  //vrinda
 import person3 from '../images/picofme (4).png'; //amritesh
 import person4 from '../images/picofme (6).png'; //saakshi
@@ -26,22 +26,22 @@ const About = () => {
           {/* Person 1 */}
           <div className="team-member">
             <img src={person1} alt="Person 1" className="team-member-image" />
-            <p className="team-member-name">Chandan</p>
+            <h1 className="team-member-name">Chandan</h1>
           </div>
           {/* Person 2 */}
           <div className="team-member">
             <img src={person2} alt="Person 2" className="team-member-image" />
-            <p className="team-member-name">Vrinda</p>
+            <h1 className="team-member-name">Vrinda</h1>
           </div>
           {/* Person 3 */}
           <div className="team-member">
             <img src={person3} alt="Person 3" className="team-member-image" />
-            <p className="team-member-name">Amritesh</p>
+            <h1 className="team-member-name">Amritesh</h1>
           </div>
           {/* Person 4 */}
           <div className="team-member">
             <img src={person4} alt="Person 4" className="team-member-image" />
-            <p className="team-member-name">Saakshi</p>
+            <h1 className="team-member-name">Saakshi</h1>
           </div>
         </div>
         <button className='buy-coffee-btn' onClick={handleOpenPopup}>Buy Me Coffee</button>

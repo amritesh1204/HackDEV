@@ -1,8 +1,9 @@
 export const ACTIONS={
     SELECT: "SELECT",
-    RECTANGLE:"Rectangle",
+    RECTANGLE:"RECTANGLE",
     CIRCLE:"CIRCLE",
     SCRIBBLE:"SCRIBBLE",
-    ARROW:"ARROW"
+    ARROW:"ARROW",
+    ERASER:"ERASER"
 };
 export default ACTIONS;

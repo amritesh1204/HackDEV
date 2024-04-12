@@ -1,16 +1,26 @@
 import React, { useRef, useState } from 'react';
-import { Stage, Layer, Rect, Circle, Arrow, Line, Transformer } from 'react-konva';
+import { Stage, Layer, Rect, Circle, Arrow, Line, Transformer, Text } from 'react-konva';
 import { LuPencil } from "react-icons/lu";
-import { FaLongArrowAltRight } from "react-icons/fa";
+import { FaLongArrowAltRight, FaEraser } from "react-icons/fa";
 import { FaRegCircle } from "react-icons/fa";
 import { GiArrowCursor } from "react-icons/gi";
 import { IoMdDownload } from "react-icons/io";
 import { TbRectangle } from "react-icons/tb";
+import { PiTextboxBold } from "react-icons/pi"; // Import the text box icon
 
 import { v4 as uuidv4 } from 'uuid';
-import { ACTIONS } from '../pages/constants';
 import html2canvas from 'html2canvas'; 
 import '../styles/Drawingboard.css'; 
+
+const ACTIONS = {
+  SELECT: "SELECT",
+  RECTANGLE: "RECTANGLE",
+  CIRCLE: "CIRCLE",
+  SCRIBBLE: "SCRIBBLE",
+  ARROW: "ARROW",
+  ERASER: "ERASER",
+  TEXT: "TEXT",
+};
 
 function DrawingBoard() {
   const stageRef = useRef();
@@ -18,6 +28,8 @@ function DrawingBoard() {
   const [action, setAction] = useState(ACTIONS.SELECT);
   const [fillColor, setFillColor] = useState('#ff0000');
   const [shapes, setShapes] = useState([]);
+  const [textBoxText, setTextBoxText] = useState('');
+  const [textBoxPosition, setTextBoxPosition] = useState({ x: 50, y: 50 });
 
   const strokeColor = '#000';
   const isPaining = useRef();
@@ -25,8 +37,12 @@ function DrawingBoard() {
 
   const isDraggable = action === ACTIONS.SELECT;
 
+  function handleEraserClick() {
+    setAction(ACTIONS.ERASER);
+  }
+
   function handlePointerDown() {
-    if (action === ACTIONS.SELECT) return;
+    if (action === ACTIONS.SELECT || action === ACTIONS.ERASER) return;
 
     const stage = stageRef.current;
     const { x, y } = stage.getPointerPosition();
@@ -72,6 +88,18 @@ function DrawingBoard() {
           type: 'scribble',
           points: [x, y],
           fillColor,
+        };
+        break;
+      case ACTIONS.TEXT:
+        newShape = {
+          id,
+          type: 'text',
+          text: textBoxText,
+          x,
+          y,
+          fontSize: 16,
+          fontColor: strokeColor,
+          draggable: true,
         };
         break;
       default:
@@ -125,9 +153,36 @@ function DrawingBoard() {
   }
 
   function handleClick(e) {
-    if (action !== ACTIONS.SELECT) return;
-    const target = e.currentTarget;
-    transformerRef.current.nodes([target]);
+    if (action === ACTIONS.SELECT) {
+      const target = e.currentTarget;
+      transformerRef.current.nodes([target]);
+    } else if (action === ACTIONS.ERASER) {
+      const id = e.currentTarget.attrs.id;
+      const type = e.currentTarget.attrs.type;
+      if (type === 'SCRIBBLE') {
+        setShapes(shapes.filter(shape => shape.type !== 'SCRIBBLE'));
+      } else {
+        setShapes(shapes.filter(shape => shape.id !== id));
+      }
+    }
+  }
+  
+  
+
+  function handleTextBoxSubmit() {
+    const id = uuidv4();
+    const newTextShape = {
+      id,
+      type: 'TEXT',
+      text: textBoxText,
+      x: textBoxPosition.x,
+      y: textBoxPosition.y,
+      fontSize: 16,
+      fontColor: strokeColor,
+      draggable: true,
+    };
+    setShapes([...shapes, newTextShape]);
+    setTextBoxText('');
   }
 
   return (
@@ -164,6 +219,18 @@ function DrawingBoard() {
             onClick={() => setAction(ACTIONS.SCRIBBLE)}
           >
             <LuPencil size={'1.5rem'} />
+          </button>
+          <button
+            className={action === ACTIONS.TEXT ? 'active' : ''}
+            onClick={() => setAction(ACTIONS.TEXT)}
+          >
+            <PiTextboxBold size={'1.5rem'} /> {/* Text box icon */}
+          </button>
+          <button
+            className={action === ACTIONS.ERASER ? 'active' : ''}
+            onClick={handleEraserClick}
+          >
+            <FaEraser size={'1.5rem'} />
           </button>
         </div>
         <div className="color-picker">
@@ -207,8 +274,7 @@ function DrawingBoard() {
                 return (
                   <Rect
                     key={shape.id}
-                    x={shape.x}
-                    y={shape.y}
+                    {...shape}
                     stroke={strokeColor}
                     strokeWidth={2}
                     fill={shape.fillColor}
@@ -222,9 +288,7 @@ function DrawingBoard() {
                 return (
                   <Circle
                     key={shape.id}
-                    radius={shape.radius}
-                    x={shape.x}
-                    y={shape.y}
+                    {...shape}
                     stroke={strokeColor}
                     strokeWidth={2}
                     fill={shape.fillColor}
@@ -236,7 +300,7 @@ function DrawingBoard() {
                 return (
                   <Arrow
                     key={shape.id}
-                    points={shape.points}
+                    {...shape}
                     stroke={strokeColor}
                     strokeWidth={2}
                     fill={shape.fillColor}
@@ -248,12 +312,23 @@ function DrawingBoard() {
                 return (
                   <Line
                     key={shape.id}
+                    {...shape}
                     lineCap="round"
                     lineJoin="round"
-                    points={shape.points}
                     stroke={strokeColor}
                     strokeWidth={2}
                     fill={shape.fillColor}
+                    draggable={isDraggable}
+                    onClick={handleClick}
+                  />
+                );
+              case 'text':
+                return (
+                  <Text
+                    key={shape.id}
+                    {...shape}
+                    fontSize={shape.fontSize}
+                    fill={shape.fontColor}
                     draggable={isDraggable}
                     onClick={handleClick}
                   />
