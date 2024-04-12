@@ -36,10 +36,10 @@ const ReusableTrailComponent = () => {
   return (
     <div onClick={toggleOpen}>
       <Trail open={open}>
-        <span>SMILE</span>
-        <span>BECAUSE,</span>
-        <span>AHH..</span>
-        <span>HASLO!</span>
+        <span>You live in</span>
+        <span>sunlight,</span>
+        <span>I grew</span>
+        <span>in dark</span>
       </Trail>
     </div>
   );
