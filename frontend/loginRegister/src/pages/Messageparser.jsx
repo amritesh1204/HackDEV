@@ -20,7 +20,7 @@ const MessageParser = ({ children, actions }) => {
     actions.sendMessage("Chandan 😜😂")
 }
 else if (message.toLowerCase().includes('features')){
-  actions.sendMessage("P2p messaging, password is hashed,message broadcast,Board for scribble,Role based login,and yeah myself-the bot. More features will be added soon.")
+  actions.sendMessage("P2p messaging, password is hashed,message broadcast,Board for scribble,Role based login,and yeah myself-the bot.You can download your signature in canvas. More features will be added soon.")
 
 
 }
