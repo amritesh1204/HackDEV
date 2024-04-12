@@ -1,0 +1,44 @@
+.drawing-board {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  .controls {
+    position: absolute;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    background-color: #ffffff;
+  }
+  
+  .tool-buttons button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .tool-buttons button.active {
+    background-color: #f0f0f0;
+  }
+  
+  .color-picker input {
+    width: 2rem;
+    height: 2rem;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  .export-button button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  

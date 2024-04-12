@@ -9,6 +9,7 @@ import About from './pages/about';
 import Whistleblow from './pages/whistleblow';
 import Rooms from './pages/rooms';
 import P2pmessage from './pages/p2pmessage';
+import Canvas from './pages/canvas';
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
       <Route path='/whistleblow' element={<Whistleblow/>}></Route>
       <Route path='/room/:roomID' element={<Rooms/>}></Route>
       <Route path='/chat' element={<P2pmessage/>}></Route>
+      <Route path='/canvas' element={<Canvas/>}></Route>
       
     </Routes>
     </BrowserRouter>

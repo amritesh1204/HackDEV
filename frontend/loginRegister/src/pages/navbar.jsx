@@ -25,7 +25,7 @@ export default function Navbar() {
           <NavLink to="/chat" className="nav-link">Chat</NavLink>
         </li>
         <li className="nav-item">
-          <NavLink to="/qr" className="nav-link">Encrypt</NavLink>
+          <NavLink to="/canvas" className="nav-link">Canvas</NavLink>
         </li>
         {isAnonymous && (
           <li className="nav-item">
