@@ -37,7 +37,7 @@ app.use(cors({
 const port = 3000;
 
 // Connect to MongoDB
-connect('mongodb+srv://Chandan:Chandan123@cluster0.bn1c8mj.mongodb.net/') 
+connect('mongodb+srv://Chandan:Chandan11@cluster0.0shrq.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0') 
     .then(() => {
         console.log(chalk.cyan(`MongoDB connected`));
     })
