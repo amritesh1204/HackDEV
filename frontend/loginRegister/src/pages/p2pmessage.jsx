@@ -1,6 +1,7 @@
+// P2PMessage.jsx
 import React, { Component } from 'react';
 import '../styles/p2p.css'; // Import CSS file
-import ChatBox from './chatbox.jsx';
+import ChatBox from './chatbox'; // Corrected import path
 import Peer from 'peerjs';
 
 class P2PMessage extends Component {
@@ -17,13 +18,13 @@ class P2PMessage extends Component {
   componentDidMount() {
     const peer = new Peer();
 
-    peer.on('open', (ownPeerId) => {
+    peer.on('open', ownPeerId => {
       console.log('My peer ID is: ' + ownPeerId);
       this.setState({ ownPeerId });
     });
 
-    peer.on('connection', (conn) => {
-      conn.on('data', (data) => {
+    peer.on('connection', conn => {
+      conn.on('data', data => {
         this.addChat('Peer', data);
       });
     });
@@ -33,16 +34,19 @@ class P2PMessage extends Component {
 
   addChat = (name, message, alert = false) => {
     this.setState(prevState => ({
-      chatLog: [...prevState.chatLog, {
-        name,
-        message,
-        timestamp: Date.now(),
-        alert
-      }]
+      chatLog: [
+        ...prevState.chatLog,
+        {
+          name,
+          message,
+          timestamp: Date.now(),
+          alert
+        }
+      ]
     }));
-  }
+  };
 
-  handleSend = (msg) => {
+  handleSend = msg => {
     const { peer, remotePeerId } = this.state;
     if (peer && remotePeerId) {
       const conn = peer.connect(remotePeerId);
@@ -51,11 +55,11 @@ class P2PMessage extends Component {
         this.addChat('Me', msg);
       });
     }
-  }
+  };
 
-  handleRemotePeerIdChange = (event) => {
+  handleRemotePeerIdChange = event => {
     this.setState({ remotePeerId: event.target.value });
-  }
+  };
 
   render() {
     const { chatLog, ownPeerId, remotePeerId } = this.state;
@@ -71,10 +75,7 @@ class P2PMessage extends Component {
             onChange={this.handleRemotePeerIdChange}
           />
         </div>
-        <ChatBox
-          chatLog={chatLog}
-          onSend={this.handleSend}
-        />
+        <ChatBox chatLog={chatLog} onSend={this.handleSend} />
       </div>
     );
   }

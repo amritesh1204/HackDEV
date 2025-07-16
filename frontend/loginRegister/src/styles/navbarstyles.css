@@ -3,7 +3,7 @@
   justify-content: space-between; /* Keeps items spaced out */
   align-items: center;
   background: rgba(0, 0, 0, 0.2); /* Black with transparency */
-  color: #ffffff;
+  color: #671edc;
   padding: 5px 10px; /* Reduced vertical padding to make navbar slimmer */
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Bolder shadow for depth */
@@ -17,7 +17,7 @@
 .navbar-brand {
   font-size: 2.5rem; /* Increased font size for brand */
   font-weight: 1500;
-  color: cornsilk; /* Ensures brand visibility against the gradient */
+  color: rgb(241, 196, 13); /* Ensures brand visibility against the gradient */
 }
 
 .navbar-nav {
@@ -32,7 +32,7 @@
 }
 
 .nav-link {
-  color: #e6e6e6; /* Adjusted for better visibility */
+  color: #e2ae7b; /* Adjusted for better visibility */
   text-decoration: none;
   position: relative;
   font-size: 1.2rem; /* Increased font size for navigation links */
@@ -78,4 +78,11 @@
 .anonymous-button:hover {
   background-color: #218838; /* A slightly darker shade for depth */
   transform: translateY(-2px); /* Lift button slightly on hover */
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
 }
